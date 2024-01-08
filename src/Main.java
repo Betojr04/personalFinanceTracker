@@ -3,18 +3,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Hello and welcome to Finance Tracker!");
 
-        System.out.print("Hello and welcome to Finance Tracker!");
+        System.out.println("Enter your transaction description: ");
+        String description = scanner.nextLine();
+
+        System.out.println("Enter transaction amount: ");
+        double amount = scanner.nextDouble();
+
+
+
+
     }
-}
-
-class Transaction{
-    private String transactionDescription;
-    private double transactionAmount;
-
-    public Transaction(String transactionDescription, double transactionAmount) {
-        this.transactionAmount = transactionAmount;
-        this.transactionDescription = transactionDescription;
-    }
-
 }
