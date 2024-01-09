@@ -1,5 +1,5 @@
 public class Balance {
-    double currentBalance;
+    double balance;
 
     public Balance () {
     this.balance = 0.0;
@@ -9,7 +9,7 @@ public class Balance {
         balance += amount;
     }
 
-    public void descreaseBalance(double amount){
+    public void decreaseBalance(double amount){
         balance -= amount;
     }
 
