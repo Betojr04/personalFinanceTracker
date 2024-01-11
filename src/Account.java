@@ -1,4 +1,4 @@
-
+import java.util.Date;
 public class Account {
     private String accountName;
     private Balance balance;
@@ -11,7 +11,21 @@ public class Account {
         this.expenses = new Expenses();
         this.income = new Income();
     }
-    // Method to add transaction (income or expense) and update balance
+
+    public void addIncomeTransaction(String description, Date date, String category, double amount){
+        Transaction incomeTransaction = new Transaction(description, amount, date, category);
+
+        this.income.addIncome(incomeTransaction);
+        this.balance.increaseBalance(amount);
+    }
+
+    public void addExpensesTransaction(String description, Date date, String category, double amount) {
+        Transaction expensesTransaction = new Transaction(description, amount, date, category);
+
+        this.expenses.addExpense(expensesTransaction);
+        this.balance.decreaseBalance(amount);
+
+    }
     // Method to generate report for the account
 
     // Getters and setters
