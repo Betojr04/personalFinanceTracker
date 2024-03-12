@@ -6,10 +6,22 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         //        Greeting user at the start of the program
         System.out.println("Hello and welcome to Finance Tracker!");
-        /*
-        * while loop to keep user in the program to enter more transactions without having to restart the program every
-        * time he enters a new one
-        * */
-        
+
+        System.out.println("1.) Create a new account 2.) Enter New Transaction into an existing account");
+        int initialAnswer = scanner.nextInt();
+
+        switch (initialAnswer) {
+            case 1 :
+                System.out.println("Please enter the name of your new account");
+                String newAccountName = scanner.nextLine();
+
+                break;
+
+            case 2 :
+                System.out.println("Which existing account would you like to add a transaction to?");
+                String existingAccountName = scanner.nextLine();
+        }
+
+
     }
 }
